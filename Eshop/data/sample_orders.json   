@@ -1,0 +1,21 @@
+{
+  "orderid": 1,
+  "products": [
+    {
+      "product_id": "quannau",
+      "product_name": "quan au",
+      "size": "XL",
+      "price": 10,
+      "quantity": 1
+    },
+    {
+      "product_id": "somi",
+      "product_name": "ao so mi",
+      "size": "XL",
+      "price": 10.5,
+      "quantity": 2
+    }
+  ],
+  "total_amount": 31,
+  "delivery_address": "Hanoi"
+}
