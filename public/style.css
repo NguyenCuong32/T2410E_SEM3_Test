@@ -1,0 +1,11 @@
+body {
+    background: #f2f4f7;
+}
+
+.card {
+    border-radius: 12px;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #eef5ff;
+}
