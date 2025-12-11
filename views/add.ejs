@@ -1,0 +1,36 @@
+<h2 class="mb-4">Add New Product</h2>
+
+<form action="/add" method="POST">
+
+    <div class="mb-3">
+        <label>Product Code</label>
+        <input type="text" name="ProductCode" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label>Product Name</label>
+        <input type="text" name="ProductName" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label>Product Date</label>
+        <input type="text" name="ProductDate" class="form-control" placeholder="22/08/2023" required>
+    </div>
+
+    <div class="mb-3">
+        <label>Origin Price</label>
+        <input type="number" name="ProductOriginPrice" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label>Quantity</label>
+        <input type="number" name="Quantity" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label>Store Code</label>
+        <input type="text" name="ProductStoreCode" class="form-control" required>
+    </div>
+
+    <button class="btn btn-success">Add Product</button>
+</form>
