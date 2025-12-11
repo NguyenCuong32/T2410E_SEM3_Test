@@ -1,0 +1,34 @@
+<h2 class="mb-4">Product List</h2>
+
+<a href="/add" class="btn btn-primary mb-3">+ Add New Product</a>
+<a href="/sort-storecode" class="btn btn-warning mb-3">Sort by StoreCode (DESC)</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Origin Price</th>
+            <th>Quantity</th>
+            <th>Store Code</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% products.forEach(p => { %>
+            <tr>
+                <td><%= p.ProductCode %></td>
+                <td><%= p.ProductName %></td>
+                <td><%= p.ProductDate %></td>
+                <td><%= p.ProductOriginPrice %></td>
+                <td><%= p.Quantity %></td>
+                <td><%= p.ProductStoreCode %></td>
+                <td>
+                    <a href="/delete/<%= p._id %>" class="btn btn-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
