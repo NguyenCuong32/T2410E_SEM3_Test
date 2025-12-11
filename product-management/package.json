@@ -1,0 +1,21 @@
+{
+  "name": "product-management",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^2.2.1",
+    "bootstrap": "^5.3.8",
+    "ejs": "^3.1.10",
+    "express": "^5.2.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^9.0.1"
+  }
+}
