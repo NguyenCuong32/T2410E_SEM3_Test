@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+
+<body class="bg-light">
+
+<div class="container mt-4">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="text-primary">Product Dashboard</h2>
+        <a href="/add" class="btn btn-success">Add Product</a>
+    </div>
+
+    <table class="table table-striped table-hover">
+        <thead class="table-primary">
+            <tr>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Origin Price</th>
+                <th>Qty</th>
+                <th>Store</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% list.forEach(item => { %>
+            <tr>
+                <td><%= item.code %></td>
+                <td><%= item.name %></td>
+                <td><%= item.date %></td>
+                <td><%= item.originPrice %></td>
+                <td><%= item.quantity %></td>
+                <td><%= item.storeCode %></td>
+                <td>
+                    <a href="/delete/<%= item.code %>" class="btn btn-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
