@@ -1,0 +1,32 @@
+<% include('layout') %>
+
+<h2>Thêm sản phẩm mới</h2>
+<form action="/products" method="POST">
+  <div class="mb-3">
+    <label class="form-label">ProductCode</label>
+    <input name="ProductCode" class="form-control" required/>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">ProductName</label>
+    <input name="ProductName" class="form-control" required/>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">ProductDate (dd/mm/yyyy or yyyy-mm-dd)</label>
+    <input name="ProductDate" class="form-control" />
+  </div>
+  <div class="mb-3">
+    <label class="form-label">ProductOriginPrice</label>
+    <input name="ProductOriginPrice" class="form-control" required />
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Quantity</label>
+    <input name="Quantity" class="form-control" />
+  </div>
+  <div class="mb-3">
+    <label class="form-label">ProductStoreCode</label>
+    <input name="ProductStoreCode" class="form-control" required />
+  </div>
+
+  <button class="btn btn-success">Add</button>
+  <a href="/" class="btn btn-secondary">Cancel</a>
+</form>

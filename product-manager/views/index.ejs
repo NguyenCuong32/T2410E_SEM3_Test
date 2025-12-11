@@ -1,0 +1,39 @@
+<% include('layout') %>
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h1>Products by Store (sorted desc by origin price)</h1>
+  <a href="/products/new" class="btn btn-primary">Add product</a>
+</div>
+
+<% for (const store of Object.keys(groups)) { %>
+  <div class="card mb-3">
+    <div class="card-header">
+      <strong>Store: <%= store %></strong> — <%= groups[store].length %> sản phẩm
+    </div>
+    <div class="card-body p-0">
+      <table class="table mb-0">
+        <thead>
+          <tr>
+            <th>Code</th><th>Name</th><th>Date</th><th>Price</th><th>Qty</th><th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% groups[store].forEach(p => { %>
+            <tr>
+              <td><%= p.ProductCode %></td>
+              <td><%= p.ProductName %></td>
+              <td><%= p.ProductDate ? new Date(p.ProductDate).toLocaleDateString() : '' %></td>
+              <td><%= p.ProductOriginPrice.toLocaleString() %></td>
+              <td><%= p.Quantity %></td>
+              <td>
+                <form action="/products/<%= p._id %>?_method=DELETE" method="POST" style="display:inline">
+                  <button class="btn btn-sm btn-danger" onclick="return confirm('Delete product?')">Delete</button>
+                </form>
+              </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+<% } %>
