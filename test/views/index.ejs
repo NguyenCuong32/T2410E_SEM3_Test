@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Sản Phẩm</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container py-5">
+
+    <h1 class="text-center mb-4">Hệ Thống Quản Lý Sản Phẩm</h1>
+
+    <div class="card mb-5 shadow">
+        <div class="card-header bg-primary text-white">
+            <h5>Thêm Sản Phẩm Mới</h5>
+        </div>
+        <div class="card-body">
+            <form action="/web/add" method="POST" class="row g-3">
+                <div class="col-md-4">
+                    <label class="form-label">Mã SP (ProductCode)</label>
+                    <input type="text" name="ProductCode" class="form-control" required placeholder="VD: A12">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Tên SP (ProductName)</label>
+                    <input type="text" name="ProductName" class="form-control" required placeholder="VD: Bánh kẹo">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Ngày (ProductDate)</label>
+                    <input type="text" name="ProductDate" class="form-control" placeholder="22/08/2023">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Giá Gốc (OriginPrice)</label>
+                    <input type="number" name="ProductOriginPrice" class="form-control" placeholder="5000000">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Số Lượng (Quantity)</label>
+                    <input type="number" name="Quantity" class="form-control" placeholder="1000">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Mã Kho (StoreCode)</label>
+                    <input type="text" name="ProductStoreCode" class="form-control" required placeholder="VD: S10">
+                </div>
+                <div class="col-12 mt-3">
+                    <button type="submit" class="btn btn-success w-100">Thêm Sản Phẩm</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="card shadow">
+        <div class="card-header bg-dark text-white">
+            <h5>Danh Sách Sản Phẩm (Đã sắp xếp giảm dần theo StoreCode)</h5>
+        </div>
+        <div class="card-body">
+            <table class="table table-bordered table-hover text-center align-middle">
+                <thead class="table-light">
+                    <tr>
+                        <th>Mã SP</th>
+                        <th>Tên SP</th>
+                        <th>Ngày Nhập</th>
+                        <th>Giá Gốc</th>
+                        <th>Số Lượng</th>
+                        <th>Mã Kho</th>
+                        <th>Hành Động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% if(products.length > 0) { %>
+                        <% products.forEach(function(item) { %>
+                            <tr>
+                                <td><%= item.ProductCode %></td>
+                                <td><%= item.ProductName %></td>
+                                <td><%= item.ProductDate %></td>
+                                <td><%= item.ProductOriginPrice %></td>
+                                <td><%= item.Quantity %></td>
+                                <td class="fw-bold text-primary"><%= item.ProductStoreCode %></td>
+                                <td>
+                                    <form action="/web/delete/<%= item._id %>" method="POST" onsubmit="return confirm('Bạn có chắc chắn muốn xóa không?');">
+                                        <button type="submit" class="btn btn-danger btn-sm">Xóa</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        <% }); %>
+                    <% } else { %>
+                        <tr>
+                            <td colspan="7" class="text-muted">Chưa có dữ liệu sản phẩm.</td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
