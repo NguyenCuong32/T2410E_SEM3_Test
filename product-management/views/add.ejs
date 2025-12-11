@@ -1,0 +1,31 @@
+<h1 class="my-4">Thêm sản phẩm mới</h1>
+<form action="/add" method="POST">
+  <div class="row g-3">
+    <div class="col-md-6">
+      <label>Mã sản phẩm</label>
+      <input type="text" name="ProductCode" class="form-control" required />
+    </div>
+    <div class="col-md-6">
+      <label>Tên sản phẩm</label>
+      <input type="text" name="ProductName" class="form-control" required />
+    </div>
+    <div class="col-md-6">
+      <label>Ngày nhập (dd/mm/yyyy)</label>
+      <input type="date" name="ProductDate" class="form-control" required />
+    </div>
+    <div class="col-md-6">
+      <label>Giá gốc</label>
+      <input type="number" name="ProductOriginPrice" class="form-control" required />
+    </div>
+    <div class="col-md-6">
+      <label>Số lượng</label>
+      <input type="number" name="Quantity" class="form-control" required />
+    </div>
+    <div class="col-md-6">
+      <label>Mã kho</label>
+      <input type="text" name="ProductStoreCode" class="form-control" value="S10" required />
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary mt-3">Thêm sản phẩm</button>
+  <a href="/" class="btn btn-secondary mt-3 ms-2">Quay lại</a>
+</form>
