@@ -1,0 +1,64 @@
+<%- include('partials/header') %>
+
+<!-- Add Product Form -->
+<div class="card mb-4 p-3">
+    <form action="/products" method="POST" class="row g-3">
+        <div class="col-md-2">
+            <input type="text" class="form-control" name="ProductCode" placeholder="Code" required>
+        </div>
+        <div class="col-md-2">
+            <input type="text" class="form-control" name="ProductName" placeholder="Name" required>
+        </div>
+        <div class="col-md-2">
+            <input type="date" class="form-control" name="ProductDate" required>
+        </div>
+        <div class="col-md-2">
+            <input type="number" class="form-control" name="ProductOriginPrice" placeholder="Price" required>
+        </div>
+        <div class="col-md-2">
+            <input type="number" class="form-control" name="Quantity" placeholder="Quantity" required>
+        </div>
+        <div class="col-md-2">
+            <input type="text" class="form-control" name="ProductStoreCode" placeholder="Store Code" required>
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary mt-2">Add Product</button>
+        </div>
+    </form>
+</div>
+
+<!-- Product Table -->
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Store Code</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% products.forEach(product => { %>
+            <tr>
+                <td><%= product.ProductCode %></td>
+                <td><%= product.ProductName %></td>
+                <td><%= product.ProductDate.toISOString().split('T')[0] %></td>
+                <td><%= product.ProductOriginPrice.toLocaleString() %></td>
+                <td><%= product.Quantity %></td>
+                <td><%= product.ProductStoreCode %></td>
+                <td>
+                    <form action="/products/<%= product._id %>?_method=DELETE" method="POST">
+                        <button class="btn btn-danger btn-sm">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
+
+</div>
+</body>
+</html>
