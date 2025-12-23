@@ -5,7 +5,7 @@ from datetime import datetime, date
 DB_CONFIG = {
     "host": "localhost",
     "user": "root",
-    "password": "",          # XAMPP default thường là rỗng
+    "password": "",          
     "database": "medical_service"
 }
 
