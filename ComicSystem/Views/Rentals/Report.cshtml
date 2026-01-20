@@ -1,0 +1,55 @@
+﻿@using ComicSystem.Models.ViewModels
+@model List<RentalReportVM>
+
+<h2>Book Rental Report</h2>
+
+<form asp-action="Report" method="post" class="mb-3">
+    <div class="row">
+        <div class="col-md-3">
+            <label>Start Date</label>
+            <input type="date" name="startDate" class="form-control" required />
+        </div>
+
+        <div class="col-md-3">
+            <label>End Date</label>
+            <input type="date" name="endDate" class="form-control" required />
+        </div>
+
+        <div class="col-md-3 mt-4">
+            <button type="submit" class="btn btn-primary">Generate</button>
+        </div>
+    </div>
+</form>
+
+@if (Model != null && Model.Any())
+{
+    <table class="table table-bordered text-center">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Book name</th>
+                <th>Rental date</th>
+                <th>Return date</th>
+                <th>Customer name</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                int no = 1;
+            }
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@no</td>
+                    <td>@item.BookName</td>
+                    <td>@item.RentalDate.ToString("dd/MM/yyyy")</td>
+                    <td>@item.ReturnDate.ToString("dd/MM/yyyy")</td>
+                    <td>@item.CustomerName</td>
+                    <td>@item.Quantity</td>
+                </tr>
+                no++;
+            }
+        </tbody>
+    </table>
+}

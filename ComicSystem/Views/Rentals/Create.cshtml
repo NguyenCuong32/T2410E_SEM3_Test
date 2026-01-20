@@ -1,0 +1,50 @@
+﻿<h2>Rent a Comic Book</h2>
+
+<form asp-action="Create" method="post">
+
+    <div class="form-group">
+        <label>Customer</label>
+        <select name="customerId" class="form-control">
+            <option value="" disabled selected>
+                -- ▼ Select Customer --
+            </option>
+            @foreach (var c in ViewBag.Customers)
+            {
+                <option value="@c.Value">@c.Text</option>
+            }
+        </select>
+    </div>
+
+
+    <div class="form-group">
+        <label>Comic Book</label>
+        <select name="comicBookId" class="form-control">
+            <option value="" disabled selected>
+                -- ▼ Select Comic Book --
+            </option>
+            @foreach (var book in ViewBag.Books)
+            {
+                <option value="@book.Value">@book.Text</option>
+            }
+        </select>
+    </div>
+
+
+    <div class="form-group">
+        <label>Rental Date</label>
+        <input type="date" name="rentalDate" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Return Date</label>
+        <input type="date" name="returnDate" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Quantity</label>
+        <input type="number" name="quantity" class="form-control" min="1" />
+    </div>
+
+    <button type="submit" class="btn btn-success">Rent</button>
+    <a asp-controller="ComicBooks" asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
