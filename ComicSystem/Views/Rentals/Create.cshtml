@@ -1,0 +1,20 @@
+<form method="post">
+<select name="customerId">
+@foreach (var c in ViewBag.Customers)
+{
+<option value="@c.CustomerId">@c.FullName</option>
+}
+</select>
+
+<select name="comicBookId">
+@foreach (var b in ViewBag.ComicBooks)
+{
+<option value="@b.ComicBookId">@b.BookName</option>
+}
+</select>
+
+<input type="date" name="rentalDate" />
+<input type="date" name="returnDate" />
+<input name="quantity" />
+<button>Rent</button>
+</form>

@@ -1,0 +1,14 @@
+<a href="/ComicBooks/Create">Add Comic</a>
+<table border="1">
+@foreach (var item in Model)
+{
+<tr>
+<td>@item.BookName</td>
+<td>@item.PricePerDay</td>
+<td>
+<a href="/ComicBooks/Edit/@item.ComicBookId">Edit</a> |
+<a href="/ComicBooks/Delete/@item.ComicBookId">Delete</a>
+</td>
+</tr>
+}
+</table>

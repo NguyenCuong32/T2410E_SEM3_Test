@@ -1,0 +1,20 @@
+<table border="1">
+<tr>
+<th>No</th><th>Book</th><th>Rental</th><th>Return</th><th>Customer</th><th>Qty</th>
+</tr>
+@{
+int i = 1;
+}
+@foreach (var item in Model)
+{
+<tr>
+<td>@i</td>
+<td>@item.BookName</td>
+<td>@item.RentalDate.ToShortDateString()</td>
+<td>@item.ReturnDate.ToShortDateString()</td>
+<td>@item.CustomerName</td>
+<td>@item.Quantity</td>
+</tr>
+i++;
+}
+</table>
