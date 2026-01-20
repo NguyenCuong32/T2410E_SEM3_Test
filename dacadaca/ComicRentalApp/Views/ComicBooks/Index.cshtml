@@ -1,0 +1,30 @@
+@model IEnumerable<ComicRentalApp.Models.ComicBook>
+
+<h1>Comic Books</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Price per Day</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var comic in Model)
+        {
+            <tr>
+                <td>@comic.Title</td>
+                <td>@comic.Author</td>
+                <td>@comic.PricePerDay</td>
+                <td>
+                    <a href="@Url.Action("Edit", "ComicBooks", new { id = comic.Id })" class="btn btn-warning btn-sm">Edit</a>
+                    <a href="@Url.Action("Delete", "ComicBooks", new { id = comic.Id })" class="btn btn-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("Create", "ComicBooks")" class="btn btn-primary">Create New Comic Book</a>

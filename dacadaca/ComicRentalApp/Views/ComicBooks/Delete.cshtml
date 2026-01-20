@@ -1,0 +1,10 @@
+@model ComicRentalApp.Models.ComicBook
+
+<h1>Delete Comic Book</h1>
+
+<p>Are you sure you want to delete the comic book titled "@Model.Title" by "@Model.Author"?</p>
+
+<form method="post">
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a href="@Url.Action("Index", "ComicBooks")" class="btn btn-secondary">Cancel</a>
+</form>
