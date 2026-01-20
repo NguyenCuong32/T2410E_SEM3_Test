@@ -1,0 +1,33 @@
+﻿<form method="get">
+    <input type="date" name="startDate" />
+    <input type="date" name="endDate" />
+    <button type="submit">Filter</button>
+</form>
+
+<table border="1">
+    <tr>
+        <th>No</th>
+        <th>Book name</th>
+        <th>Rental date</th>
+        <th>Return date</th>
+        <th>Customer name</th>
+        <th>Quantity</th>
+    </tr>
+
+    @{
+        int i = 1;
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>@i</td>
+                <td>@item.BookName</td>
+                <td>@item.RentalDate.ToShortDateString()</td>
+                <td>@item.ReturnDate.ToShortDateString()</td>
+                <td>@item.CustomerName</td>
+                <td>@item.Quantity</td>
+            </tr>
+            i++;
+        }
+    
+}
+</table>
