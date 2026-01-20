@@ -1,0 +1,36 @@
+@model IEnumerable<dynamic>
+
+<h2>Rental Report</h2>
+
+<form method="get">
+    Start: <input type="date" name="start" />
+    End: <input type="date" name="end" />
+    <button type="submit">Filter</button>
+</form>
+
+<table border="1" cellpadding="5">
+    <tr>
+        <th>No</th>
+        <th>Book</th>
+        <th>Rental Date</th>
+        <th>Return Date</th>
+        <th>Customer</th>
+        <th>Quantity</th>
+    </tr>
+
+@{
+    int i = 1;
+    foreach (var item in Model)
+    {
+        <tr>
+            <td>@i</td>
+            <td>@item.BookName</td>
+            <td>@item.RentalDate</td>
+            <td>@item.ReturnDate</td>
+            <td>@item.CustomerName</td>
+            <td>@item.Quantity</td>
+        </tr>
+        i++;
+    }
+}
+</table>

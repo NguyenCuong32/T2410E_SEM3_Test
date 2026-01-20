@@ -1,0 +1,19 @@
+@model IEnumerable<ComicSystem.Models.Customer>
+
+<h2>Customers</h2>
+
+<table border="1" cellpadding="5">
+    <tr>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Register Date</th>
+    </tr>
+@foreach (var c in Model)
+{
+    <tr>
+        <td>@c.FullName</td>
+        <td>@c.Phone</td>
+        <td>@c.RegisterDate</td>
+    </tr>
+}
+</table>

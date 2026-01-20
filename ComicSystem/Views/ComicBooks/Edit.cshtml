@@ -1,0 +1,11 @@
+@model ComicSystem.Models.ComicBook
+
+<h2>Edit Comic</h2>
+
+<form method="post">
+    <input type="hidden" name="Id" value="@Model.Id" />
+    <p>Title: <input name="Title" value="@Model.Title" /></p>
+    <p>Author: <input name="Author" value="@Model.Author" /></p>
+    <p>Price/Day: <input name="PricePerDay" value="@Model.PricePerDay" /></p>
+    <button type="submit">Update</button>
+</form>

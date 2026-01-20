@@ -1,0 +1,25 @@
+@model IEnumerable<ComicSystem.Models.ComicBook>
+
+<h2>Comic Books</h2>
+<a href="/ComicBooks/Create">Create New</a>
+
+<table border="1" cellpadding="5">
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Price/Day</th>
+        <th>Action</th>
+    </tr>
+@foreach (var item in Model)
+{
+    <tr>
+        <td>@item.Title</td>
+        <td>@item.Author</td>
+        <td>@item.PricePerDay</td>
+        <td>
+            <a href="/ComicBooks/Edit/@item.Id">Edit</a> |
+            <a href="/ComicBooks/Delete/@item.Id">Delete</a>
+        </td>
+    </tr>
+}
+</table>

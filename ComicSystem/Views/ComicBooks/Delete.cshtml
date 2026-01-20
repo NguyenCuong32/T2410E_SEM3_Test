@@ -1,0 +1,9 @@
+@model ComicSystem.Models.ComicBook
+
+<h2>Delete Comic</h2>
+<p>Are you sure to delete: <b>@Model.Title</b>?</p>
+
+<form method="post">
+    <input type="hidden" name="id" value="@Model.Id" />
+    <button type="submit">Delete</button>
+</form>

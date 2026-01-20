@@ -1,0 +1,28 @@
+<h2>Rent Book</h2>
+
+<form method="post">
+    <p>Customer:
+        <select name="customerId">
+            @foreach (var c in ViewBag.Customers)
+            {
+                <option value="@c.Value">@c.Text</option>
+            }
+        </select>
+    </p>
+
+    <p>Comic:
+        <select name="comicBookId">
+            @foreach (var b in ViewBag.Comics)
+            {
+                <option value="@b.Value">@b.Text</option>
+            }
+        </select>
+    </p>
+
+    <p>Rental Date: <input type="date" name="rentalDate" /></p>
+    <p>Return Date: <input type="date" name="returnDate" /></p>
+    <p>Quantity: <input name="quantity" /></p>
+    <p>Price/Day: <input name="pricePerDay" /></p>
+
+    <button type="submit">Rent</button>
+</form>
