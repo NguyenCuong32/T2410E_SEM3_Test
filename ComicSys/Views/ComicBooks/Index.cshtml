@@ -1,0 +1,41 @@
+@model IEnumerable<ComicBook>
+
+@{
+    ViewData["Title"] = "Comic Books";
+}
+
+<h2>Comic Books</h2>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Add Comic Book</a>
+</p>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Price / Day</th>
+            <th style="width:180px;">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model)
+{
+        <tr>
+            <td>@item.Title</td>
+            <td>@item.Author</td>
+            <td>@item.PricePerDay</td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ComicBookID" class="btn btn-sm btn-warning">Edit</a>
+                <a asp-action="Delete"
+                   asp-route-id="@item.ComicBookID"
+                   onclick="return confirm('Are you sure?')"
+                   class="btn btn-sm btn-danger">
+                    Delete
+                </a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
