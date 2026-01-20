@@ -1,0 +1,41 @@
+@model IEnumerable<ComicSystem.DTOs.RentalHistoryDto>
+
+@{
+    ViewData["Title"] = "Rental History";
+}
+
+<h1>Rental History</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New Rental</a>
+</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Rental ID</th>
+            <th>Customer Name</th>
+            <th>Comic Book</th>
+            <th>Quantity</th>
+            <th>Price/Day</th>
+            <th>Rental Date</th>
+            <th>Return Date</th>
+            <th>Status</th>
+            <th>Total Cost</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.RentalID)</td>
+            <td>@Html.DisplayFor(modelItem => item.CustomerName)</td>
+            <td>@Html.DisplayFor(modelItem => item.ComicBookTitle)</td>
+            <td>@Html.DisplayFor(modelItem => item.Quantity)</td>
+            <td>@Html.DisplayFor(modelItem => item.PricePerDay)</td>
+            <td>@Html.DisplayFor(modelItem => item.RentalDate)</td>
+            <td>@Html.DisplayFor(modelItem => item.ReturnDate)</td>
+            <td>@Html.DisplayFor(modelItem => item.Status)</td>
+            <td>@Html.DisplayFor(modelItem => item.TotalCost)</td>
+        </tr>
+}
+    </tbody>
+</table>

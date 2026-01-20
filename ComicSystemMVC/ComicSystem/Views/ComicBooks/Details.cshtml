@@ -1,0 +1,35 @@
+@model ComicSystem.Models.ComicBook
+
+@{
+    ViewData["Title"] = "Comic Book Details";
+}
+
+<h1>Comic Book Details</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-3">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class = "col-sm-9">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class = "col-sm-3">
+            @Html.DisplayNameFor(model => model.Author)
+        </dt>
+        <dd class = "col-sm-9">
+            @Html.DisplayFor(model => model.Author)
+        </dd>
+        <dt class = "col-sm-3">
+            @Html.DisplayNameFor(model => model.PricePerDay)
+        </dt>
+        <dd class = "col-sm-9">
+            @Html.DisplayFor(model => model.PricePerDay)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.ComicBookID" class="btn btn-warning">Edit</a>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</div>
