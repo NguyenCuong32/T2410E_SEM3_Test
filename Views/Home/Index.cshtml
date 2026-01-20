@@ -1,0 +1,153 @@
+﻿@model ASM.Models.HomeViewModel
+
+@{
+    ViewData["Title"] = "Comic Rental System";
+}
+
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    h2 {
+        margin-top: 40px;
+        color: #2c3e50;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+    }
+
+    th, td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    .action {
+        margin-bottom: 10px;
+    }
+
+        .action a {
+            text-decoration: none;
+            padding: 6px 10px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+</style>
+
+<h1>📚 Comic Rental Management System</h1>
+
+<!-- ================= CUSTOMERS ================= -->
+<h2>Customers</h2>
+<div class="action">
+    <a href="/CustomersMvc/Create">➕ Add Customer</a>
+</div>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Full Name</th>
+        <th>Phone Number</th>
+        <th>Registration Date</th>
+    </tr>
+    @foreach (var c in Model.Customers)
+    {
+        <tr>
+            <td>@c.CustomerID</td>
+            <td>@c.FullName</td>
+            <td>@c.PhoneNumber</td>
+            <td>@c.RegistrationDate.ToString("dd/MM/yyyy")</td>
+        </tr>
+    }
+</table>
+
+<!-- ================= COMIC BOOKS ================= -->
+<h2>Comic Books</h2>
+<div class="action">
+    <a href="/ComicBooksMvc/Create">➕ Add Comic Book</a>
+</div>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Price / Day</th>
+    </tr>
+    @foreach (var b in Model.ComicBooks)
+    {
+        <tr>
+            <td>@b.ComicBookID</td>
+            <td>@b.Title</td>
+            <td>@b.Author</td>
+            <td>@b.PricePerDay</td>
+        </tr>
+    }
+</table>
+
+<!-- ================= RENTALS ================= -->
+<h2>Rentals</h2>
+<div class="action">
+    <a href="/RentalsMvc/Create">➕ Create Rental</a>
+</div>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Customer ID</th>
+        <th>Rental Date</th>
+        <th>Return Date</th>
+        <th>Status</th>
+    </tr>
+    @foreach (var r in Model.Rentals)
+    {
+        <tr>
+            <td>@r.RentalID</td>
+            <td>@r.CustomerID</td>
+            <td>@r.RentalDate.ToString("dd/MM/yyyy")</td>
+            <td>
+                @(r.ReturnDate.HasValue
+                            ? r.ReturnDate.Value.ToString("dd/MM/yyyy")
+                            : "Chưa trả")
+        </td>
+        <td>@r.Status</td>
+    </tr>
+        }
+</table>
+
+<!-- ================= RENTAL DETAILS ================= -->
+<h2>Rental Details</h2>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Rental ID</th>
+        <th>Comic Book ID</th>
+        <th>Quantity</th>
+        <th>Price / Day</th>
+    </tr>
+    @foreach (var d in Model.RentalDetails)
+    {
+        <tr>
+            <td>@d.RentalDetailID</td>
+            <td>@d.RentalID</td>
+            <td>@d.ComicBookID</td>
+            <td>@d.Quantity</td>
+            <td>@d.PricePerDay</td>
+        </tr>
+    }
+</table>
