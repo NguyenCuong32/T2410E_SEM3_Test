@@ -1,0 +1,41 @@
+﻿@model Comic_Book_Rental.Models.Rental
+
+@{
+    ViewData["Title"] = "Create Rental";
+}
+
+<h1>Thuê Sách Mới</h1>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create">
+            <div class="form-group mb-3">
+                <label class="control-label">Khách hàng</label>
+                <select name="CustomerID" class="form-control" asp-items="ViewBag.CustomerID"></select>
+            </div>
+
+            <div class="form-group mb-3">
+                <label class="control-label">Chọn Truyện</label>
+                <select name="ComicBookID" class="form-control" asp-items="ViewBag.ComicBookID"></select>
+            </div>
+
+            <div class="form-group mb-3">
+                <label class="control-label">Số lượng</label>
+                <input type="number" name="Quantity" class="form-control" value="1" min="1" />
+            </div>
+
+            <div class="form-group mb-3">
+                <label class="control-label">Ngày trả dự kiến</label>
+                <input type="date" name="ReturnDate" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Tạo Đơn Thuê" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Quay lại danh sách</a>
+</div>

@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Comic_Book_Rental.ViewModels.RentalReportViewModel>
+
+@{
+    ViewData["Title"] = "Báo Cáo Thuê Sách";
+}
+
+<h1>Báo Cáo Tình Hình Thuê Sách</h1>
+<hr />
+
+<div class="card mb-4">
+    <div class="card-body">
+        <form method="get" action="Report" class="row g-3">
+            <div class="col-auto">
+                <label class="col-form-label">Từ ngày:</label>
+            </div>
+            <div class="col-auto">
+                <input type="date" name="fromDate" class="form-control" />
+            </div>
+            <div class="col-auto">
+                <label class="col-form-label">Đến ngày:</label>
+            </div>
+            <div class="col-auto">
+                <input type="date" name="toDate" class="form-control" />
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary">Lọc Dữ Liệu</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Tên Truyện</th>
+            <th>Khách Hàng</th>
+            <th>Ngày Thuê</th>
+            <th>Ngày Trả (Dự kiến)</th>
+            <th>Số Lượng</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Any())
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.BookName</td>
+                    <td>@item.CustomerName</td>
+                    <td>@item.RentalDate.ToString("dd/MM/yyyy")</td>
+                    <td>@item.ReturnDate.ToString("dd/MM/yyyy")</td>
+                    <td>@item.Quantity</td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="5" class="text-center">Không có dữ liệu nào trong khoảng thời gian này.</td>
+            </tr>
+        }
+    </tbody>
+</table>
