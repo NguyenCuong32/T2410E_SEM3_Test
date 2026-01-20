@@ -1,0 +1,46 @@
+﻿@model IEnumerable<ComicSystem.Models.Rental>
+@{
+    ViewData["Title"] = "Rentals";
+}
+
+<h1>Rentals</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create Rental</a>
+</p>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>RentalId</th>
+            <th>Customer</th>
+            <th>RentalDate</th>
+            <th>ReturnDate</th>
+            <th>Status</th>
+            <th>Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var r in Model)
+        {
+            <tr>
+                <td>@r.RentalId</td>
+                <td>@r.Customer?.FullName</td>
+                <td>@r.RentalDate.ToString("dd/MM/yyyy")</td>
+                <td>@r.ReturnDate.ToString("dd/MM/yyyy")</td>
+                <td>@r.Status</td>
+                <td>
+                    @if (r.Details != null && r.Details.Count > 0)
+                    {
+                        <ul>
+                            @foreach (var d in r.Details)
+                            {
+                                <li>@d.ComicBook?.Title (Qty: @d.Quantity, Price/Day: @d.PricePerDay)</li>
+                            }
+                        </ul>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
