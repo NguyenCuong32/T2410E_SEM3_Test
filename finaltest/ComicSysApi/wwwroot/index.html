@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ComicSys UI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1>ComicSys Admin</h1>
+      <div class="header-actions">
+        <a href="/swagger/index.html" class="link">API Docs</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="app-grid">
+    <aside class="sidebar">
+      <div class="panel">
+        <h2>Sections</h2>
+        <nav class="side-nav">
+          <button id="btn-comics" class="btn btn-primary">Comic Books</button>
+          <button id="btn-customers" class="btn">Customers</button>
+          <button id="btn-rentals" class="btn">Rentals</button>
+          <button id="btn-reports" class="btn">Reports</button>
+        </nav>
+        <hr />
+        <p class="muted">Quick actions</p>
+        <button id="refresh" class="btn">Refresh current</button>
+      </div>
+    </aside>
+
+    <section id="content" class="content">
+      <div id="message"></div>
+      <div id="form-container"></div>
+      <div id="list"></div>
+    </section>
+  </main>
+  <footer>
+    <small>Simple frontend for the ComicSys API</small>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+:root{
+	--bg:#0f1724;
+	--surface:#0b1220;
+	--card:#0f1724;
+	--panel:#0b1220;
+	--accent:#4f46e5;
+	--muted:#9ca3af;
+	--text:#e6eef8;
+}
+
+*{box-sizing:border-box}
+body{font-family:Inter,Segoe UI,Arial,Helvetica,sans-serif;margin:0;background:linear-gradient(180deg,#071029 0%, #071b2a 100%);color:var(--text);min-height:100vh}
+
+header{background:transparent;padding:18px 28px;border-bottom:1px solid rgba(255,255,255,0.04)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:12px}
+header h1{margin:0;font-size:1.1rem;letter-spacing:0.2px}
+.link{color:var(--accent);text-decoration:none;font-weight:600}
+
+.app-grid{display:grid;grid-template-columns:260px 1fr;gap:20px;padding:20px}
+.sidebar .panel{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:16px;border-radius:10px;border:1px solid rgba(255,255,255,0.04)}
+.side-nav{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+
+.btn{display:inline-block;padding:8px 12px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--text);cursor:pointer}
+.btn-primary{background:linear-gradient(90deg,var(--accent),#7c3aed);border:none;color:white}
+.btn:hover{transform:translateY(-1px)}
+
+.content{padding:8px}
+#message{margin-bottom:8px}
+.info{color:#9ee7ff}
+.muted{color:var(--muted)}
+
+#form-container .btn{margin-top:8px}
+
+#list .items{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+#list .items li{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:space-between}
+#list .items li strong{display:inline-block;width:54px;color:var(--muted)}
+
+input[type=text], input[type=number], textarea{width:100%;padding:8px;border-radius:6px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text);outline:none}
+form input, form textarea{margin-top:8px}
+
+pre{white-space:pre-wrap;word-break:break-word;background:rgba(0,0,0,0.2);padding:12px;border-radius:8px;color:var(--text);overflow:auto}
+.error{color:#ff7b7b}
+footer{padding:18px 28px;color:var(--muted);font-size:0.9rem}
+
+@media (max-width:900px){
+	.app-grid{grid-template-columns:1fr;padding:12px}
+	.sidebar{order:2}
+}
