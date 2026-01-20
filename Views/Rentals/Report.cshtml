@@ -1,0 +1,35 @@
+@model IEnumerable<ComicSystem.Models.ReportViewModel>
+
+<h2>Report Rentals</h2>
+
+<form method="get">
+    <label>Start Date:</label>
+    <input type="date" name="startDate" />
+    <label>End Date:</label>
+    <input type="date" name="endDate" />
+    <button type="submit">Filter</button>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Book Name</th>
+            <th>Rental Date</th>
+            <th>Return Date</th>
+            <th>Customer Name</th>
+            <th>Quantity</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.BookName</td>
+            <td>@item.RentalDate.ToShortDateString()</td>
+            <td>@item.ReturnDate.ToShortDateString()</td>
+            <td>@item.CustomerName</td>
+            <td>@item.Quantity</td>
+        </tr>
+    }
+    </tbody>
+</table>
