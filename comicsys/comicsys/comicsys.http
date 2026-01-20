@@ -1,0 +1,6 @@
+@comicsys_HostAddress = http://localhost:5147
+
+GET {{comicsys_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

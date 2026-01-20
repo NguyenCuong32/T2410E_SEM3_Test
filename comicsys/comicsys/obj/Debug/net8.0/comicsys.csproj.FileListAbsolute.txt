@@ -1,0 +1,11 @@
+D:\SEM3\TestDACA\T2410E_SEM3_Test\comicsys\comicsys\obj\Debug\net8.0\comicsys.csproj.AssemblyReference.cache
+D:\SEM3\TestDACA\T2410E_SEM3_Test\comicsys\comicsys\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\SEM3\TestDACA\T2410E_SEM3_Test\comicsys\comicsys\obj\Debug\net8.0\comicsys.GeneratedMSBuildEditorConfig.editorconfig
+D:\SEM3\TestDACA\T2410E_SEM3_Test\comicsys\comicsys\obj\Debug\net8.0\comicsys.AssemblyInfoInputs.cache
+D:\SEM3\TestDACA\T2410E_SEM3_Test\comicsys\comicsys\obj\Debug\net8.0\comicsys.AssemblyInfo.cs
+D:\SEM3\TestDACA\T2410E_SEM3_Test\comicsys\comicsys\obj\Debug\net8.0\comicsys.csproj.CoreCompileInputs.cache
+D:\SEM3\TestDACA\T2410E_SEM3_Test\comicsys\comicsys\obj\Debug\net8.0\comicsys.MvcApplicationPartsAssemblyInfo.cs
+D:\SEM3\TestDACA\T2410E_SEM3_Test\comicsys\comicsys\obj\Debug\net8.0\comicsys.MvcApplicationPartsAssemblyInfo.cache
+D:\SEM3\TestDACA\T2410E_SEM3_Test\comicsys\comicsys\obj\Debug\net8.0\comicsys.RazorAssemblyInfo.cache
+D:\SEM3\TestDACA\T2410E_SEM3_Test\comicsys\comicsys\obj\Debug\net8.0\comicsys.RazorAssemblyInfo.cs
+D:\SEM3\TestDACA\T2410E_SEM3_Test\comicsys\comicsys\obj\Debug\net8.0\comicsys.sourcelink.json

@@ -1,0 +1,32 @@
+﻿@model IEnumerable<ComicSystem.Models.ComicBook>
+
+<h1>Danh sách sách truyện</h1>
+
+<p>
+    <a asp-action="Create">Tạo mới</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Title)</th>
+            <th>@Html.DisplayNameFor(model => model.Author)</th>
+            <th>@Html.DisplayNameFor(model => model.PricePerDay)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Title)</td>
+                <td>@Html.DisplayFor(modelItem => item.Author)</td>
+                <td>@Html.DisplayFor(modelItem => item.PricePerDay)</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ComicBookID">Sửa</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ComicBookID">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

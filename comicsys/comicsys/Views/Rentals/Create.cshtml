@@ -1,0 +1,32 @@
+﻿<h4>Thuê sách</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label>Khách hàng</label>
+                <select name="CustomerID" asp-items="ViewBag.Customers" class="form-control"></select>
+            </div>
+            <div class="form-group">
+                <label>Sách</label>
+                <select name="ComicBookID" asp-items="ViewBag.ComicBooks" class="form-control"></select>
+            </div>
+            <div class="form-group">
+                <label>Số lượng</label>
+                <input type="number" name="Quantity" class="form-control" min="1" />
+            </div>
+            <div class="form-group">
+                <label>Ngày thuê</label>
+                <input type="date" name="RentalDate" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Ngày trả</label>
+                <input type="date" name="ReturnDate" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Thuê" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>

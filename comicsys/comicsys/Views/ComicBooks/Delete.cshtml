@@ -1,0 +1,21 @@
+﻿@model ComicSystem.Models.ComicBook
+
+<h3>Bạn chắc chắn muốn xóa?</h3>
+<div>
+    <h4>@Model.Title</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Title)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Title)</dd>
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Author)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Author)</dd>
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.PricePerDay)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.PricePerDay)</dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ComicBookID" />
+        <input type="submit" value="Xóa" class="btn btn-danger" /> |
+        <a asp-action="Index">Quay lại</a>
+    </form>
+</div>
