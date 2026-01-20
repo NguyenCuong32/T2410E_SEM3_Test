@@ -1,0 +1,9 @@
+C:\Users\hi tcc\source\repos\ComicSystem\ComicSystem\obj\Debug\net8.0\ComicSystem.csproj.AssemblyReference.cache
+C:\Users\hi tcc\source\repos\ComicSystem\ComicSystem\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\hi tcc\source\repos\ComicSystem\ComicSystem\obj\Debug\net8.0\ComicSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hi tcc\source\repos\ComicSystem\ComicSystem\obj\Debug\net8.0\ComicSystem.AssemblyInfoInputs.cache
+C:\Users\hi tcc\source\repos\ComicSystem\ComicSystem\obj\Debug\net8.0\ComicSystem.AssemblyInfo.cs
+C:\Users\hi tcc\source\repos\ComicSystem\ComicSystem\obj\Debug\net8.0\ComicSystem.csproj.CoreCompileInputs.cache
+C:\Users\hi tcc\source\repos\ComicSystem\ComicSystem\obj\Debug\net8.0\ComicSystem.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\hi tcc\source\repos\ComicSystem\ComicSystem\obj\Debug\net8.0\ComicSystem.RazorAssemblyInfo.cache
+C:\Users\hi tcc\source\repos\ComicSystem\ComicSystem\obj\Debug\net8.0\ComicSystem.RazorAssemblyInfo.cs

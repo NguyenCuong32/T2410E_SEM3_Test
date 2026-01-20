@@ -1,0 +1,26 @@
+﻿<h2>Rent Book</h2>
+
+<form asp-action="Create" method="post">
+
+    <label>Customer</label>
+    <select name="customerId" asp-items="ViewBag.Customers"></select>
+    <br /><br />
+
+    <label>Comic Book</label>
+    <select name="comicBookId" asp-items="ViewBag.ComicBooks"></select>
+    <br /><br />
+
+    <label>Rental Date</label>
+    <input type="date" name="rentalDate" />
+    <br /><br />
+
+    <label>Return Date</label>
+    <input type="date" name="returnDate" />
+    <br /><br />
+
+    <label>Quantity</label>
+    <input type="number" name="quantity" value="1" />
+    <br /><br />
+
+    <button type="submit">Rent</button>
+</form>
