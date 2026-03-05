@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("T2410E_SEM3_Test")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9be4a31f631223bdc2bce2735555576667091bd9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e72ce2e945cf44ad6e7fa11e7a5ecb0948e64272")]
 [assembly: System.Reflection.AssemblyProductAttribute("T2410E_SEM3_Test")]
 [assembly: System.Reflection.AssemblyTitleAttribute("T2410E_SEM3_Test")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
