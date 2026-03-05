@@ -1,0 +1,15 @@
+D:\DMAS\T2410E_SEM3_Test\BattleGameProject\Backend\BattleGame.Models\obj\Debug\net8.0\BattleGame.Models.csproj.AssemblyReference.cache
+D:\DMAS\T2410E_SEM3_Test\BattleGameProject\Backend\BattleGame.Models\obj\Debug\net8.0\BattleGame.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\DMAS\T2410E_SEM3_Test\BattleGameProject\Backend\BattleGame.Models\obj\Debug\net8.0\BattleGame.Models.AssemblyInfoInputs.cache
+D:\DMAS\T2410E_SEM3_Test\BattleGameProject\Backend\BattleGame.Models\obj\Debug\net8.0\BattleGame.Models.AssemblyInfo.cs
+D:\DMAS\T2410E_SEM3_Test\BattleGameProject\Backend\BattleGame.Models\obj\Debug\net8.0\BattleGame.Models.csproj.CoreCompileInputs.cache
+D:\DMAS\T2410E_SEM3_Test\BattleGameProject\Backend\BattleGame.Models\obj\Debug\net8.0\BattleGame.Models.sourcelink.json
+D:\DMAS\T2410E_SEM3_Test\BattleGameProject\Backend\BattleGame.Models\bin\Debug\net8.0\BattleGame.Models.deps.json
+D:\DMAS\T2410E_SEM3_Test\BattleGameProject\Backend\BattleGame.Models\bin\Debug\net8.0\BattleGame.Models.runtimeconfig.json
+D:\DMAS\T2410E_SEM3_Test\BattleGameProject\Backend\BattleGame.Models\bin\Debug\net8.0\BattleGame.Models.dll
+D:\DMAS\T2410E_SEM3_Test\BattleGameProject\Backend\BattleGame.Models\bin\Debug\net8.0\BattleGame.Models.pdb
+D:\DMAS\T2410E_SEM3_Test\BattleGameProject\Backend\BattleGame.Models\obj\Debug\net8.0\BattleGame.Models.dll
+D:\DMAS\T2410E_SEM3_Test\BattleGameProject\Backend\BattleGame.Models\obj\Debug\net8.0\refint\BattleGame.Models.dll
+D:\DMAS\T2410E_SEM3_Test\BattleGameProject\Backend\BattleGame.Models\obj\Debug\net8.0\BattleGame.Models.pdb
+D:\DMAS\T2410E_SEM3_Test\BattleGameProject\Backend\BattleGame.Models\obj\Debug\net8.0\BattleGame.Models.genruntimeconfig.cache
+D:\DMAS\T2410E_SEM3_Test\BattleGameProject\Backend\BattleGame.Models\obj\Debug\net8.0\ref\BattleGame.Models.dll
