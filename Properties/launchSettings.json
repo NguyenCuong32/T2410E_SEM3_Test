@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "T2410E_SEM3_Test": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7177",
+      "launchBrowser": false
+    }
+  }
+}
