@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Player Assets</title>
+</head>
+
+<body>
+
+    <h2>Player Assets</h2>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Player Name</th>
+                <th>Level</th>
+                <th>Age</th>
+                <th>Asset</th>
+            </tr>
+        </thead>
+
+        <tbody id="data"></tbody>
+    </table>
+
+    <script>
+
+fetch("http://localhost:7071/api/getassetsbyplayer")
+.then(res => res.json())
+.then(data => {
+
+let rows = "";
+
+data.forEach(x => {
+
+rows += `
+<tr>
+<td>${x.playerName}</td>
+<td>${x.level}</td>
+<td>${x.age}</td>
+<td>${x.assetName}</td>
+</tr>
+`
+
+})
+
+document.getElementById("data").innerHTML = rows
+
+})
+
+    </script>
+
+</body>
+</html>
