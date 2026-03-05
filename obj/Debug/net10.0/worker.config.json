@@ -1,0 +1,10 @@
+{
+  "description": {
+    "language": "dotnet-isolated",
+    "extensions": [ ".dll" ],
+    "defaultExecutablePath": "dotnet",
+    "defaultWorkerPath": "T2410E_SEM3_Test.dll",
+    "workerIndexing": "true",
+    "canUsePlaceholder": true
+  }
+}
