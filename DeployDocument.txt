@@ -1,0 +1,22 @@
+﻿Azure Function Deploy Guide
+
+Step 1: Install Azure CLI
+
+Step 2: Login Azure
+az login
+
+Step 3: Open project in Visual Studio
+
+Step 4: Right click project
+Publish -> Azure -> Function App
+
+Step 5: Choose Azure subscription
+
+Step 6: Deploy project
+
+Step 7: Test API in browser
+
+Example API:
+POST /api/registerplayer
+POST /api/createasset
+GET /api/getassets

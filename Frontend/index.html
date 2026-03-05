@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Game Assets</title>
+</head>
+
+<body>
+
+    <h2>Player Assets</h2>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Player Name</th>
+                <th>Level</th>
+                <th>Age</th>
+                <th>Asset</th>
+            </tr>
+        </thead>
+
+        <tbody id="data"></tbody>
+    </table>
+
+    <script>
+        fetch("http://localhost:7256/api/getassets")
+            .then(res => res.json())
+            .then(data => {
+
+                console.log(data); // debug
+
+                let table = document.getElementById("data");
+
+                data.forEach(item => {
+
+                    let row = document.createElement("tr");
+
+                    row.innerHTML = `
+<td>${item.playerName}</td>
+<td>${item.level}</td>
+<td>${item.age}</td>
+<td>${item.assetName}</td>
+`;
+
+                    table.appendChild(row);
+
+                });
+
+            })
+            .catch(error => console.log(error));
+    </script>
+
+</body>
+</html>
