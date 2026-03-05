@@ -1,0 +1,5 @@
+D:\code\baithi1\DMAS\obj\Debug\net8.0\DMAS.csproj.AssemblyReference.cache
+D:\code\baithi1\DMAS\obj\Debug\net8.0\DMAS.GeneratedMSBuildEditorConfig.editorconfig
+D:\code\baithi1\DMAS\obj\Debug\net8.0\DMAS.AssemblyInfoInputs.cache
+D:\code\baithi1\DMAS\obj\Debug\net8.0\DMAS.AssemblyInfo.cs
+D:\code\baithi1\DMAS\obj\Debug\net8.0\DMAS.csproj.CoreCompileInputs.cache
