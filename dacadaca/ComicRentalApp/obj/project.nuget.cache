@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tQtTv5rzALU=",
+  "dgSpecHash": "3VG9Gxph/fM=",
   "success": true,
-  "projectFilePath": "C:\\code\\dacadaca\\ComicRentalApp\\ComicRentalApp.csproj",
+  "projectFilePath": "C:\\code\\Nop bai thi\\T2410E_SEM3_Test\\dacadaca\\ComicRentalApp\\ComicRentalApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\2.0.0\\microsoft.extensions.logging.abstractions.2.0.0.nupkg.sha512",

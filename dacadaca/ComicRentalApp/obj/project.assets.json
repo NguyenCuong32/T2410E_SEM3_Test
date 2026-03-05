@@ -605,11 +605,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\code\\dacadaca\\ComicRentalApp\\ComicRentalApp.csproj",
+      "projectUniqueName": "C:\\code\\Nop bai thi\\T2410E_SEM3_Test\\dacadaca\\ComicRentalApp\\ComicRentalApp.csproj",
       "projectName": "ComicRentalApp",
-      "projectPath": "C:\\code\\dacadaca\\ComicRentalApp\\ComicRentalApp.csproj",
+      "projectPath": "C:\\code\\Nop bai thi\\T2410E_SEM3_Test\\dacadaca\\ComicRentalApp\\ComicRentalApp.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\code\\dacadaca\\ComicRentalApp\\obj\\",
+      "outputPath": "C:\\code\\Nop bai thi\\T2410E_SEM3_Test\\dacadaca\\ComicRentalApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
