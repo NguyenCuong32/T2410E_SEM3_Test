@@ -1,0 +1,117 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  background: #f4f6f9;
+  color: #1a1a2e;
+}
+
+.container {
+  max-width: 900px;
+  margin: 48px auto;
+  padding: 0 16px;
+}
+
+.header {
+  margin-bottom: 28px;
+}
+
+.header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.header p {
+  margin-top: 6px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #1a1a2e;
+  color: #ffffff;
+}
+
+thead th {
+  padding: 14px 20px;
+  text-align: left;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+tbody tr {
+  border-bottom: 1px solid #e8ecf0;
+  transition: background 0.15s ease;
+}
+
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+tbody tr:hover {
+  background: #f0f4ff;
+}
+
+tbody td {
+  padding: 14px 20px;
+  font-size: 0.95rem;
+}
+
+.no-col {
+  width: 60px;
+  color: #888;
+  font-weight: 500;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: #e8f0fe;
+  color: #1a56db;
+}
+
+.error-box {
+  background: #fff0f0;
+  border: 1px solid #f5c6cb;
+  border-radius: 8px;
+  padding: 20px;
+  color: #c0392b;
+  font-size: 0.95rem;
+}
+
+.empty {
+  text-align: center;
+  padding: 48px;
+  color: #aaa;
+  font-size: 1rem;
+}
