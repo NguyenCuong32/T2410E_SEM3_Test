@@ -1,0 +1,11 @@
+using System;
+
+namespace Backend.Models
+{
+    public class Asset
+    {
+        public Guid AssetId { get; set; }
+        public string AssetName { get; set; }
+        public int LevelRequire { get; set; }
+    }
+}
